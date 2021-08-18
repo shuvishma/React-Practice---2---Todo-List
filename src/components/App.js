@@ -9,14 +9,17 @@ function ListItem(props) {
 	return isEditMode ? (
 		<li>
 			<textarea 
+				className="editTask"
 				value={tempTask}
 				onChange={function (event) {
 					setTempTask(event.target.value) ;
 				}}></textarea>
 			<button
+				className="saveTask"
 				onClick={function () {
 					if(tempTask != '') {
 						onModify(tempTask, i) ;
+						setIsEditMode(false) ;
 					}
 				}}
 			>Save</button>
