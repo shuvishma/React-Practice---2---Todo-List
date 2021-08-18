@@ -26,7 +26,7 @@ function ListItem(props) {
 		</li>
 	) : (
 		<>
-			<li className={list}>{children}</li>
+			<li className="list">{children}</li>
 			<button
 				onClick = {function () {
 					setIsEditMode(true) ;
